@@ -6,6 +6,29 @@
   font-style: normal;   
 }
 
+@font-face {
+  font-family: 'MullerRegular'; 
+  src: url('../fonts/MullerBold.woff') format('woff'), 
+       url('../fonts/MullerBold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'MullerRegular'; 
+  src: url('../fonts/MullerLight.woff') format('woff'), 
+       url('../fonts/MullerLight.woff2') format('woff2');
+  font-weight: 100;
+	font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'MullerRegular'; 
+  src: url('../fonts/MullerMedium.woff') format('woff'), 
+       url('../fonts/MullerMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  }
 
  /* ОБЩИЕ СТИЛИ */
 * {
@@ -117,7 +140,7 @@ p {
   display: flex;
   margin-right: auto;
 
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -178,7 +201,7 @@ p {
   margin: 0;
 
   font-size: 40px;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 .header-booking {
@@ -216,10 +239,11 @@ p {
   border-radius: 12px;
 
   color: #fff;
-  font-weight: 700;
+  font-weight: bold;
 
   cursor: pointer;
 
+  transition-property: all;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
@@ -241,12 +265,12 @@ p {
 }
 
 .booking-rooms-available-link {
-  font-weight: 500;
+  font-weight: bold;
   color: var(--color-active);
 }
 
   .booking-rooms-available-link:hover {
-    font-weight: 900;
+    font-weight: bold;
   }
 
 /* СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ */
@@ -258,7 +282,7 @@ p {
 .special-offer-heading {
   margin: 0;
 
-  font-weight: 700;
+  font-weight: bold;
   font-size: 66px;
   color: #fff;
   line-height: 58px;
@@ -294,7 +318,7 @@ p {
 } 
 
   .luxury-rooms-link:hover {
-    font-weight: 700;
+    font-weight: bold;
     border-bottom: 1px currentColor solid;
   }
 
@@ -321,7 +345,6 @@ p {
 .services-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   line-height: 32px;
 }
@@ -338,11 +361,15 @@ p {
   border-radius: 12px;
 }
 
+.services-item:not(:nth-child(2n)) {
+  margin-right: 20px;
+}
+
 .heading-services {
   margin: 0;
 
   font-size: 22px;
-  font-weight: 200;  
+  font-weight: normal;  
 }
 
 .services-item-descript {
@@ -475,7 +502,6 @@ p {
 .placement-hotels-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .placement-hotels-item {
@@ -488,6 +514,10 @@ p {
   border-radius: 12px;
 }
 
+.placement-hotels-item:not(:nth-child(3n)) {
+  margin-right: 25px;
+}
+
 .placement-hotels-description {
   padding-left: 44px;
   padding-top: 36px;
@@ -496,7 +526,7 @@ p {
 }
 
 .price {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 22px;
 }
 
@@ -516,7 +546,7 @@ p {
   margin-top: 35px;
 
   color: var(--color-active);
-  font-weight: 700;
+  font-weight: bold;
 
   border: currentColor 1px solid;
   border-radius: 12px;
@@ -560,7 +590,7 @@ p {
 }
 
   .all-options-link:hover {
-    font-weight: 900;
+    font-weight: bold;
     border-bottom: 1px currentColor solid;
   }
 
@@ -621,7 +651,7 @@ p {
 
   .telephones:hover,
   .emails:hover {
-    font-weight: 900;
+    font-weight: bold;
   }
 
 .contacts-heading {
@@ -629,7 +659,7 @@ p {
   margin-bottom: auto;
 
   font-size: 22px;
-  font-weight: 700;
+  font-weight: bold;
   color: #666;
 }
 
@@ -643,7 +673,7 @@ p {
   margin-top: 45px;
 
   color: var(--color-active);
-  font-weight: 700;
+  font-weight: bold;
 
   border: currentColor 1px solid;
   border-radius: 12px;
@@ -694,13 +724,15 @@ p {
   border: none;
 
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
   color: #fff;
 
   padding: 26px 130px;
 
+  transition-property: all;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
+  
   cursor: pointer;
 }
   .write-us-btn:hover {
@@ -752,7 +784,7 @@ p {
 }
 
   .confident-link:hover {
-    font-weight: 900;
+    font-weight: bold;
   }
 
 .footer-center {
@@ -780,6 +812,7 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
 
+  transition-property: all;
   transition-duration: .3s;
   transition-timing-function: ease-out;
 }
